@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit5-05</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Where am I supposed to go today?</h1>
+    <p>Write your age in the textbox below!</p>
+    <input type="text" id="textbox">
+    <p>Write the day of the week in the textbox below!</p>
+    <input type="text" id="textbox2">
+    <button id="button">Check</button>
+    <p id="demo"></p>
+  </body>
+  <script>
+  document.getElementById("button").addEventListener
+  ("click", myFunction);
+   let age;
+   let day;
+   function myFunction() {
+       age=document.getElementById("textbox").value;
+       day=document.getElementById("textbox2").value;
+       if ((day == "monday"|| day == "tuseday" || day == "wednesday"|| day == "thursday" || day == "friday") && (age<17)) {
+       greeting="Time to go to school";
+       }else if ((day == "monday"|| day == "tuseday" || day == "wednesday"|| day == "thursday" || day == "friday") && (age>17)){
+       greeting="Time to go to work!";  
+       }else{
+       greeting="Time to relax for the weekend!";  
+       }
+       
+       document.getElementById("demo").innerHTML=greeting
+   }
+ 
+  </script>
+</html>
